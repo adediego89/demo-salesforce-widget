@@ -1,0 +1,26 @@
+<mat-toolbar style="padding: 0;">
+  <button mat-icon-button aria-label="Back button" [routerLink]="['/']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>Cases</span>
+  <span class="spacer"></span>
+</mat-toolbar>
+
+<div class="container">
+  <mat-nav-list>
+
+    <ng-container *ngFor="let item of itemList; let i = index;">
+      <mat-list-item [routerLink]="['/cases/' + item.Id]">
+        <span matListItemTitle>{{item.CaseNumber}}</span>
+        <span matListItemLine>{{item.Description}}</span>
+        <div matListItemMeta class="customNavListIconContainer">
+          <mat-icon >chevron_right</mat-icon>
+        </div>
+      </mat-list-item>
+      <mat-divider *ngIf="i < itemList.length - 1"></mat-divider>
+    </ng-container>
+
+  </mat-nav-list>
+</div>
+
+

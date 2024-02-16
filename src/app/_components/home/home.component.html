@@ -1,0 +1,57 @@
+<mat-toolbar>
+  <span>Contact</span>
+  <span class="spacer"></span>
+</mat-toolbar>
+
+<div class="container" *ngIf="!loading && contact">
+  <div class="contactDetails">
+    <div class="nameAndTitle">
+      <h3 class="name">{{contact.Name}}</h3>
+      <span class="title">{{contact.Title}}</span>
+    </div>
+  </div>
+
+  <mat-nav-list matNavList style="margin-top: 1rem;">
+    <mat-list-item>
+      <mat-icon matListItemAvatar class="customListMatIconLayout">call</mat-icon>
+      <span matListItemTitle>Phone</span>
+      <span matListItemLine>{{contact.Phone}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matListItemAvatar class="customListMatIconLayout">mail</mat-icon>
+      <span matListItemTitle>Email</span>
+      <span matListItemLine>{{contact.Email}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item [routerLink]="['/cases']">
+      <img matListItemAvatar src="assets/sf_case_icon.png" title="sf_case_icon" style="background-color: #FF538A;">
+      <span matListItemTitle>Cases</span>
+      <span matListItemLine>{{contact.Cases?.length + (contact.Cases?.length === 1 ? ' item found' : ' items found')}}</span>
+      <div matListItemMeta class="customNavListIconContainer" *ngIf="contact.Cases && contact.Cases.length > 0">
+        <mat-icon >chevron_right</mat-icon>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item [routerLink]="['/opportunities']">
+      <img matListItemAvatar src="assets/sf_opportunity_icon.png" title="sf_opportunity_icon" style="background-color: #FF5D2D;">
+      <span matListItemTitle>Opportunities</span>
+      <span matListItemLine>{{contact.Opportunities?.length + (contact.Opportunities?.length === 1 ? ' item found' : ' items found')}}</span>
+      <div matListItemMeta class="customNavListIconContainer" *ngIf="contact.Opportunities && contact.Opportunities.length > 0">
+        <mat-icon >chevron_right</mat-icon>
+      </div>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-nav-list>
+
+
+</div>
+
+<div class="container flex justify-content-center align-items-center flex-column" *ngIf="!loading && !contact">
+  <mat-icon class="customIconNotFound">block</mat-icon>
+  <div style="color:gray;">No contact found</div>
+</div>
+
+<div class="container" style="display: flex; justify-content: center; align-items: center;" *ngIf="loading">
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+</div>

@@ -1,0 +1,52 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.contactDetails {
+
+  padding: .5rem;
+
+  .nameAndTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .name {
+      margin-bottom: 0;
+    }
+
+    .title {
+      margin-top: .25rem;
+      font-size: .75rem;
+      color: gray;
+      font-weight: 500;
+    }
+
+  }
+
+  .detailsTitle {
+    margin: 0;
+    margin-top: .5rem;
+  }
+
+  .detailsItem {
+    font-size: .75rem;
+  }
+}
+
+.customListMatIconLayout {
+  display: flex;
+  justify-content: center;
+  background-color: gray!important;
+  align-items: center;
+  color: white;
+  font-size: 1.75rem;
+}
+
+.customIconNotFound {
+  height: 4rem;
+    width: 4rem;
+    font-size: 4rem;
+    margin: 1rem;
+    color: lightgray;
+}

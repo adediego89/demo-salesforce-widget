@@ -1,28 +1,35 @@
 {
   "name": "demo-salesforce-widget",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-github-pages": "ng build --output-path docs --base-href /demo-salesforce-widget/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^16.2.0",
+    "@angular/cdk": "^16.2.14",
     "@angular/common": "^16.2.0",
     "@angular/compiler": "^16.2.0",
     "@angular/core": "^16.2.0",
     "@angular/forms": "^16.2.0",
+    "@angular/material": "^16.2.14",
     "@angular/platform-browser": "^16.2.0",
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
+    "primeflex": "^3.3.1",
+    "purecloud-client-app-sdk": "^2.6.6",
+    "purecloud-platform-client-v2": "^188.0.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },
   "devDependencies": {
+    "@angular-builders/custom-webpack": "^16.0.1",
     "@angular-devkit/build-angular": "^16.2.12",
     "@angular/cli": "^16.2.12",
     "@angular/compiler-cli": "^16.2.0",

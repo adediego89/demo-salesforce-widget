@@ -1,0 +1,62 @@
+<mat-toolbar style="padding: 0;">
+  <button mat-icon-button aria-label="Back button" [routerLink]="['/opportunities']">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+  <span>{{itemDetails?.Name}}</span>
+  <span class="spacer"></span>
+</mat-toolbar>
+
+<div class="container">
+  <mat-list>
+    <mat-list-item>
+      <span matListItemTitle>Description</span>
+      <span matListItemLine>{{itemDetails?.Description}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>Type</span>
+      <span matListItemLine>{{itemDetails?.Type}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>CreatedDate</span>
+      <span matListItemLine>{{itemDetails?.CreatedDate | date}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>LastModifiedDate</span>
+      <span matListItemLine>{{itemDetails?.LastModifiedDate | date}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>StageName</span>
+      <span matListItemLine>{{itemDetails?.StageName}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>LeadSource</span>
+      <span matListItemLine>{{itemDetails?.LeadSource}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>Ammount</span>
+      <span matListItemLine>{{itemDetails?.Ammount}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>Probability</span>
+      <span matListItemLine>{{itemDetails?.Probability}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>ExpectedRevenue</span>
+      <span matListItemLine>{{itemDetails?.ExpectedRevenue}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <span matListItemTitle>CloseDate</span>
+      <span matListItemLine>{{itemDetails?.CloseDate}}</span>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+  </mat-list>
+</div>
